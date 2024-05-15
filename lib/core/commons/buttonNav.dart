@@ -7,7 +7,7 @@ import '../constants/themes.dart';
 class ButtonNext extends StatelessWidget {
   const ButtonNext({
     Key? key,
-    required this.onPressed, 
+    required this.onPressed,
   }) : super(key: key);
   final VoidCallback onPressed;
 

@@ -26,12 +26,12 @@ class _VoiceNoteViewState extends State<VoiceNoteView> {
             context,
             MaterialPageRoute(builder: (context) => const PinkCodeView()),
           );
-        bool voiceAuthenticated = await _authenticateVoice();
-        if (voiceAuthenticated) {
+        // bool voiceAuthenticated = await _authenticateVoice();
+        // if (voiceAuthenticated) {
          
-        } else {
-          // Gérer l'échec d'authentification par la voix
-        }
+        // } else {
+        //   // Gérer l'échec d'authentification par la voix
+        // }
       },
       child: IconButton(
         onPressed: () {},

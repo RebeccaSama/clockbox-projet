@@ -1,3 +1,4 @@
+import 'package:clockbox_projet/service/mqtt_manager.dart';
 import 'package:clockbox_projet/views/home/widgets/logo2.dart';
 import 'package:clockbox_projet/views/pointage/pointage_view.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  final MQTTManager mqttManager = MQTTManager();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +51,13 @@ class _HomeViewState extends State<HomeView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+              ElevatedButton(
+                onPressed: () async {
+                  await mqttManager.connect();
+                  mqttManager.publish('test_topic', 'Hello MQTT!');
+                },
+                child: Text('Connect and Publish'),
+              ),
             Container(
               width: double.infinity,
               color: Colors.white,

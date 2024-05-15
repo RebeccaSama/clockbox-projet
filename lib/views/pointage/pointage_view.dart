@@ -74,7 +74,7 @@ class _PointageViewState extends State<PointageView> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const QrCodeView()));
+                            builder: (context) => QrCodeView()));
                   },
                   icon: const Icon(
                     Icons.qr_code,
